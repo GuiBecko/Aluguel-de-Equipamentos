@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    
+    
+    <div class="registro">
+        <h2>Cadastrar uma conta</h2>
+
+        <form action="/login/register"  method="POST" class="form">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="padding2" name="email">
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="padding2" name="password">
+            </div>
+            <div class="links">
+                <button type="submit">Criar conta</button>
+            </div>
+        </form>
+    </div>
+    <div class="secao"></div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Variables*/
+:root{
+    --color10: hsl(74, 80%, 10%);
+    --color30: hsl(74, 80%, 30%);
+    --color70: hsl(74, 90%, 70%);
+    --color95: hsl(74, 90%, 95%);
+    --color90: hsl(74, 80%, 90%);
+    --color100: hsl743, 80%, 100%);
+    --accent: hsl(74, 80%, 70%);
+    --ff: "Noto Sans JP", "serif";
+    --ff2: "Fira Sans", "serif";
+    --p: 1rem/1.5rem var(--ff);
+    --h1: 600 3rem/1.2em var(--ff2);
+    --h2: 600 2rem/1.2em var(--ff2);
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+}
+/*Global styles*/
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    justify-content: center;
+    text-wrap: balance;
+    font: var(--p);
+}
+h1{
+    font: var(--h1);
+}
+h2{
+    font: var(--h2);
+}
+p{
+    margin: var(--spacing2);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    
+}
+.btn, button {
+    width: var(--spacing6);
+    height: var(--spacing5);
+    margin: var(--spacing2);
+    padding: var(--spacing1);
+    border-radius: var(--spacing2);
+    border: none;
+    font: var(--p);
+    cursor: pointer;
+}
+.btn:hover, button:hover {
+    transition: .5s;
+}
+img{
+    width: 100%;
+}
+
+/*Utility Classes*/
+.padding1{
+    padding: var(--spacing1) 0;
+}
+.padding2{
+    padding: var(--spacing2) 0;
+}
+.padding3{
+    padding: var(--spacing3) 0;
+}
+.padding4{
+    padding: var(--spacing4) 0;
+}
+.padding5{
+    padding: var(--spacing5) 0;
+}
+.padding6{
+    padding: var(--spacing6) 0;
+}
+.padding7{
+    padding: var(--spacing7) 0;
+}
+.margin1{
+    margin: var(--spacing1) 0;
+}
+.margin2{
+    margin: var(--spacing2) 0;
+}
+.margin3{
+    margin: var(--spacing3) 0;
+}
+.margin4{
+    margin: var(--spacing4) 0;
+}
+.margin5{
+    margin: var(--spacing5) 0;
+}
+.margin6{
+    margin: var(--spacing6) 0;
+}
+.margin7{
+    margin: var(--spacing7) 0;
+}
+
+/*CSS Normal*/
