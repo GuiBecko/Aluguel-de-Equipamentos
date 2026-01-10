@@ -2,13 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING)
   .then(() => {
     app.emit('pronto');
   })
   .catch(e => console.log(e));
 const session = require('express-session');
-const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo').default;
 const flash = require('connect-flash');
 const routes = require('./routes');
 const path = require('path');
@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
-  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()',
+  secret: 'akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()abc',
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
   resave: false,
   saveUninitialized: false,
