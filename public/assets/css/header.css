@@ -1,5 +1,12 @@
 .header{
     display: flex;
     justify-content: space-between;
-    padding: var(--spacing4);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: var(--);
+    background-color: aquamarine;
+}
+body {
+    margin-top: var(--spacing6);
 }

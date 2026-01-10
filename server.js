@@ -40,9 +40,10 @@ app.set('view engine', 'ejs');
 
 app.use(csrf());
 // Nossos próprios middlewares
-app.use(middlewareGlobal);
 app.use(checkCsrfError);
 app.use(csrfMiddleware);
+app.use(middlewareGlobal);
+
 app.use(routes);
 
 app.on('pronto', () => {

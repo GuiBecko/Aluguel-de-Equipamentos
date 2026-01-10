@@ -48,9 +48,7 @@ p{
 a{
     text-decoration: none;
 }
-a:hover{
-    
-}
+
 .btn, button {
     width: var(--spacing6);
     height: var(--spacing5);
@@ -66,6 +64,21 @@ a:hover{
 }
 img{
     width: 100%;
+}
+.erro-container {
+    background-color: hsl(0, 100%, 75%);
+    color: white;
+    font: var(--ff);
+    border-radius: var(--spacing2);
+    width: 200px;
+    height: fit-content;
+    padding: var(--spacing2);
+    margin-right: var(--spacing7);
+    position: fixed;
+    bottom: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Utility Classes*/
