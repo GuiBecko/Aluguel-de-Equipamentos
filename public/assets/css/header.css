@@ -3,9 +3,13 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
+    right: 0;
     width: 100vw;
-    height: var(--);
-    background-color: aquamarine;
+    padding: var(--spacing3);
+}
+.header a {
+    margin-right: var(--spacing3);
+
 }
 body {
     margin-top: var(--spacing6);

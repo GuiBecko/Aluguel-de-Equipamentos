@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alugueis</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+</head>
+<body>
+    <c-header class="header" logado="<%= user ? 'true' : 'false' %>"></c-header>
+
+    <h1>Pagina de listagem de alugueis</h1>
+
+    <form method="get" action="/aluguel/register">
+        <button>novo registro</button>
+    </form>
+    <script src="/assets/js/header.js"></script>
+</body>
+</html>

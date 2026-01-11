@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar aluguel</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+</head>
+<body>
+    <c-header class="header" logado="<%= user ? 'true' : 'false' %>"></c-header>
+    <h1>Cadastrar registro</h1>
+    <form action="/aluguel/create" method="post">
+        <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+        <div  class="form-group">
+            <label>Comprador</label>
+            <input type="text" name="comprador">
+        </div>
+
+        <div  class="form-group">
+            <label>Endereco</label>
+            <input type="text" name="endereco">
+        </div>
+
+        <div  class="form-group">
+            <label>Tipo do equipamento</label>
+            <input type="text" name="tipoEquipamento">
+        </div>
+
+        <div  class="form-group">
+            <label>Valor</label>
+            <input type="number" name="valor">
+        </div>
+
+        <div  class="form-group">
+            <label>Data de Aluguel</label>
+            <input type="date" name="dataAluguel">
+        </div>
+
+        <div  class="form-group">
+            <label>Termino do Aluguel</label>
+            <input type="date" name="terminoAluguel">
+        </div>
+
+        <div  class="form-group">
+            <label>Forma de pagamento</label>
+            <input type="text" name="formaPagamento">
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+<script src="/assets/js/header.js"></script>
+</body>
+</html>

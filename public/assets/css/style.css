@@ -32,7 +32,9 @@ html{
 }
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-wrap: balance;
     font: var(--p);
 }
@@ -48,15 +50,23 @@ p{
 a{
     text-decoration: none;
 }
-
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .btn, button {
-    width: var(--spacing6);
+    min-width: var(--spacing6);
     height: var(--spacing5);
     margin: var(--spacing2);
-    padding: var(--spacing1);
+    padding: 0 var(--spacing3);
     border-radius: var(--spacing2);
     border: none;
     font: var(--p);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 .btn:hover, button:hover {

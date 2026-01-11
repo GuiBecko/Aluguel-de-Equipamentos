@@ -10,8 +10,9 @@ route.get('/', homeController.paginaInicial);
 route.post('/', homeController.trataPost);
 
 // Rotas de Aluguel
-route.get('/contato', loginRequired, aluguelController.paginaInicial);
-
+route.get('/aluguel/index', loginRequired, aluguelController.Index);
+route.get('/aluguel/register', loginRequired, aluguelController.register)
+route.post('/aluguel/create', loginRequired, aluguelController.create)
 //Rotas de login
 route.get('/login/index',  loginController.loginIndex)
 route.get('/register/index',  loginController.registerIndex)
