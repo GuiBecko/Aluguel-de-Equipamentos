@@ -4,13 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="stylesheet" href="/assets/css/login.css">
+        <link rel="stylesheet" href="/assets/css/form.css">
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        
-        <%- include('includes/messages') %>
         <div class="login">
+            <div class="messages">
+                <%- include('includes/messages') %>
+            </div>
             <h2>Bem-vindo a Rent-Flow</h2>
             <form  method="POST" action="/login/login" class="form">
                 <input type="hidden" name="_csrf" value=<%= csrfToken %>>

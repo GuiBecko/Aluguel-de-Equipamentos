@@ -40,3 +40,7 @@
     top: 0;
     right: 0;
 }
+.form-container{
+    padding: var(--spacing3);
+    border-radius: var(--spacing2);
+}

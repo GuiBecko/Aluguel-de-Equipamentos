@@ -10,14 +10,10 @@
 
 <% if (success.length > 0) { %>
 
-<div class="row">
-    <div class="col my-3">
-        <div class="alert alert-success">
-            <% success.forEach(erro =>{ %>
-                <%= erro %> <br>
-            <% }) %>
-        </div>
-    </div>
+<div class="sucesso-container">
+    <% success.forEach(erro =>{ %>
+        <%= erro %> <br>
+    <% }) %>
 </div>
 
 <% } %>

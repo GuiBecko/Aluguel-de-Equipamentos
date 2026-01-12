@@ -7,10 +7,11 @@ exports.Index = (req, res) => {
     console.log(e)
   }
 };
+
 exports.register = (req, res) => {
-  console.log('cheguei aqui')
   res.render('aluguelForm')
 }
+
 exports.create = async (req, res) => {
   try {
     const aluguel = new Aluguel(req.body)
