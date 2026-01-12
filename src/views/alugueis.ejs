@@ -12,6 +12,26 @@
 
     <h1>Pagina de listagem de alugueis</h1>
 
+
+ 
+        <div class="alugueis-table">
+            <% alugueis.forEach(aluguel => { %>
+                <div class="aluguel">
+                    <div class="aluguel-info"><%= aluguel.comprador %></div>
+                    <div class="aluguel-info"><%= aluguel.endereco %></div>
+                    <div class="aluguel-info"><%= aluguel.tipoEquipamento %></div>
+                    <div class="aluguel-info"><%= aluguel.valor %></div>
+                    <div class="aluguel-info"><%= aluguel.dataAluguel %></div>
+                    <div class="aluguel-info"><%= aluguel.terminoAluguel %></div>
+                    <div class="aluguel-info"><%= aluguel.formaPagamento %></div>
+                    <div class="links">
+                        <div> <a href="/aluguel/index/:id">Editar</a></div>
+                        <div> <a href="/aluguel/delete/:id">Excluir</a></div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+
     <form method="get" action="/aluguel/register">
         <button>novo registro</button>
     </form>

@@ -66,6 +66,11 @@ class Aluguel {
             formaPagamento: this.body.formaPagamento
         }
     }
+    static async buscaAlugueis(){
+        const alugueis = await AluguelModel.find()
+        .sort({dataAluguel: -1})
+        return alugueis
+    }
 }
 
 module.exports = Aluguel

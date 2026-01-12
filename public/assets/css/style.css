@@ -97,7 +97,16 @@ img{
 .sucesso-container{
     background-color: hsl(112, 100%, 75%);
 }
-
+.alugueis-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing2);
+}
+.aluguel{
+    margin: var(--spacing3);
+}
 /*Utility Classes*/
 .padding1{
     padding: var(--spacing1) 0;

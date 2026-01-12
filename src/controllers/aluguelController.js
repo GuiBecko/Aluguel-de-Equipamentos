@@ -1,15 +1,22 @@
 const Aluguel = require ('../models/AluguelModel')
 
-exports.Index = (req, res) => {
+exports.index = async (req, res) => {
   try{
-    res.render('alugueis');
+    const alugueis = await Aluguel.buscaAlugueis()
+    res.render('alugueis', { alugueis });
   } catch(e){
     console.log(e)
+    res.render('404')
   }
 };
 
 exports.register = (req, res) => {
-  res.render('aluguelForm')
+  try{
+    res.render('aluguelForm')
+  } catch(e){
+    console.log(e)
+    res.render('404')
+  }
 }
 
 exports.create = async (req, res) => {
