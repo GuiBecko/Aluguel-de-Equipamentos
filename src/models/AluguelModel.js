@@ -71,6 +71,19 @@ class Aluguel {
         .sort({dataAluguel: -1})
         return alugueis
     }
+    static async buscaPorId(id){
+        const aluguel = await AluguelModel.findById(id)
+        return aluguel
+    }
+    static async delete(id) {
+        const aluguel = await AluguelModel.findOneAndDelete({_id: id})
+        return aluguel
+    }
+    async edit(id) {
+        this.valida()
+        if(this.errors.length > 0) return
+        this.contato = await AluguelModel.findByIdAndUpdate(id, this.body, { new: true })
+    }
 }
 
 module.exports = Aluguel

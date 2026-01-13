@@ -41,3 +41,53 @@ exports.create = async (req, res) => {
     res.render('404')
   }
 }
+exports.indexID = async (req, res) => {
+  if(!req.params.id) return res.render('404')
+    
+  const aluguel = await Aluguel.buscaPorId(req.params.id)
+  
+  if(!aluguel) return res.render('404')
+    
+  res.render('aluguel', { aluguel })
+}
+exports.delete = async (req, res) => {
+  if(!req.params.id) res.render('404')
+
+  const aluguel = await Aluguel.delete(req.params.id)
+
+  if(!aluguel) {
+    res.render('404')
+    return
+  }
+  req.flash('success', "Aluguel apagado com sucesso")
+  req.session.save(() => res.redirect('/aluguel/index'))
+  return
+}
+exports.edit = async (req, res) => {
+  if(!req.params.id){
+    res.render('404')
+  }else{
+    const aluguel = await Aluguel.buscaPorId(req.params.id)
+    res.render('aluguelEdit', { aluguel })
+  } 
+}
+exports.editPost = async(req, res) => {
+  if(!req.params.id) res.render('404')
+  
+  const aluguel = new Aluguel(req.body)
+  await aluguel.edit(req.params.id)
+
+  if(aluguel.errors.length > 0){
+    req.flash('errors', aluguel.errors)
+    req.session.save(() => {
+      res.redirect('/aluguel/index')
+    })
+    return
+  }
+
+  req.flash('success', "Aluguel editado com sucesso")
+  req.session.save(() => {
+      res.redirect('/aluguel/index')
+  })
+
+}

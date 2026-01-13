@@ -13,6 +13,10 @@ route.post('/', homeController.trataPost);
 route.get('/aluguel/index', loginRequired, aluguelController.index);
 route.get('/aluguel/register', loginRequired, aluguelController.register)
 route.post('/aluguel/create', loginRequired, aluguelController.create)
+route.get('/aluguel/index/:id',loginRequired, aluguelController.indexID)
+route.get('/aluguel/delete/:id', loginRequired, aluguelController.delete)
+route.get('/aluguel/edit/:id', loginRequired, aluguelController.edit)
+route.post('/aluguel/edit/:id', loginRequired, aluguelController.editPost)
 
 //Rotas de login
 route.get('/login/index',  loginController.loginIndex)
@@ -20,6 +24,5 @@ route.get('/register/index',  loginController.registerIndex)
 route.post('/login/register',  loginController.register)
 route.post('/login/login',  loginController.login)
 route.get('/login/logout',  loginController.logout)
-
 
 module.exports = route;

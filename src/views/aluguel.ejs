@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <c-header logado="<%= user ? 'true' : 'false' %>"></c-header>
+
+    <h1>Pagina do aluguel</h1>
+    <div class="aluguel-container">
+        <p><%= aluguel.comprador%></p>
+        <p><%= aluguel.valor%></p>
+        <p><%= aluguel.equipamento%></p>
+        <p><%= aluguel.endereco%></p>
+        <p><%= aluguel.dataAluguel%></p>
+        <p><%= aluguel.terminoAluguel%></p>
+        <p><%= aluguel.formaPagamento%></p>
+    </div>
+
+    <script src="/assets/js/header.js"></script>
+</body>
+</html>

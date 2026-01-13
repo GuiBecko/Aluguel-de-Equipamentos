@@ -11,6 +11,7 @@
     <c-header class="header" logado="<%= user ? 'true' : 'false' %>"></c-header>
 
     <h1>Meus alugueis</h1>
+    <%- include('includes/messages') %>
     <form method="get" action="/aluguel/register">
         <button>novo registro</button>
     </form>
@@ -31,9 +32,9 @@
                         <div><%= aluguel.valor %> </div>
                     
                     <div class="links">
-                        <div style="cursor: pointer;" class="more-infos">mais</div>
-                        <div> <a href="/aluguel/index/:id">Editar</a></div>
-                        <div> <a href="/aluguel/delete/:id">Excluir</a></div>
+                        <div style="cursor: pointer;" class="more-infos"><a href="/aluguel/index/<%= aluguel._id %>">mais</a></div>
+                        <div> <a href="/aluguel/edit/<%= aluguel._id %>">Editar</a></div>
+                        <div> <a href="/aluguel/delete/<%= aluguel._id %>">Excluir</a></div>
                     </div>
                 </div>
             <% }) %>
