@@ -84,6 +84,18 @@ class Aluguel {
         if(this.errors.length > 0) return
         this.contato = await AluguelModel.findByIdAndUpdate(id, this.body, { new: true })
     }
+    static async buscarComFiltro(filtro, valor){
+
+        const query = {}
+
+        if(filtro === "comprador"){
+            query[filtro] = {$regex: valor, $options: 'i'} //filtro: valor, case insensitive e aceita pedaços do valor
+        } else{
+            query[filtro] = valor; //filtro: valor
+        }
+        const aluguel = await AluguelModel.find(query).sort({dataAluguel: -1})
+        return aluguel
+    }
 }
 
 module.exports = Aluguel

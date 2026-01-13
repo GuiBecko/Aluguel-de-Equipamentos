@@ -89,5 +89,18 @@ exports.editPost = async(req, res) => {
   req.session.save(() => {
       res.redirect('/aluguel/index')
   })
+}
+exports.find = async (req, res) => {
+  try{
 
+    if(!req.params.filtro || !req.params.valor){
+      return res.redirect('aluguel/index')
+    }
+    
+    const aluguel = await Aluguel.buscarComFiltro(req.params.filtro, req.params.valor)
+    res.render('alugueis', { alugueis: aluguel })
+  } catch(e){
+    console.log(e)
+    res.render('404')
+  }
 }

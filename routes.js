@@ -17,6 +17,7 @@ route.get('/aluguel/index/:id',loginRequired, aluguelController.indexID)
 route.get('/aluguel/delete/:id', loginRequired, aluguelController.delete)
 route.get('/aluguel/edit/:id', loginRequired, aluguelController.edit)
 route.post('/aluguel/edit/:id', loginRequired, aluguelController.editPost)
+route.get('/aluguel/:filtro/:valor', loginRequired, aluguelController.find)
 
 //Rotas de login
 route.get('/login/index',  loginController.loginIndex)
