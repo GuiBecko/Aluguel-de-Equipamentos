@@ -10,21 +10,28 @@
 <body>
     <c-header class="header" logado="<%= user ? 'true' : 'false' %>"></c-header>
 
-    <h1>Pagina de listagem de alugueis</h1>
+    <h1>Meus alugueis</h1>
+    <form method="get" action="/aluguel/register">
+        <button>novo registro</button>
+    </form>
 
-
- 
-        <div class="alugueis-table">
+    
+    <div class="alugueis-table">
+        
+            <div class="grid-header">
+                <div>Comprador</div>
+                <div>Equipamento</div>
+                <div>Valor</div>
+                <div style="text-align: center;">Ações</div>
+            </div>
             <% alugueis.forEach(aluguel => { %>
                 <div class="aluguel">
-                    <div class="aluguel-info"><%= aluguel.comprador %></div>
-                    <div class="aluguel-info"><%= aluguel.endereco %></div>
-                    <div class="aluguel-info"><%= aluguel.tipoEquipamento %></div>
-                    <div class="aluguel-info"><%= aluguel.valor %></div>
-                    <div class="aluguel-info"><%= aluguel.dataAluguel %></div>
-                    <div class="aluguel-info"><%= aluguel.terminoAluguel %></div>
-                    <div class="aluguel-info"><%= aluguel.formaPagamento %></div>
+                        <div style="font-size: var(--spacing4);"><%= aluguel.comprador %> </div>
+                        <div><%= aluguel.tipoEquipamento %> </div>
+                        <div><%= aluguel.valor %> </div>
+                    
                     <div class="links">
+                        <div style="cursor: pointer;" class="more-infos">mais</div>
                         <div> <a href="/aluguel/index/:id">Editar</a></div>
                         <div> <a href="/aluguel/delete/:id">Excluir</a></div>
                     </div>
@@ -32,9 +39,7 @@
             <% }) %>
         </div>
 
-    <form method="get" action="/aluguel/register">
-        <button>novo registro</button>
-    </form>
     <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/more-infos.js"></script>
 </body>
 </html>

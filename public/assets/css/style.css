@@ -98,14 +98,33 @@ img{
     background-color: hsl(112, 100%, 75%);
 }
 .alugueis-table{
+    width: 80%;
+    margin-top: var(--spacing3);
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: var(--spacing2);
 }
 .aluguel{
-    margin: var(--spacing3);
+    width: 100%;
+    padding: var(--spacing2);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    background-color: var(--color70);
+}
+.grid-header{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    width: 100%;
+}
+.infos p{
+    display: inline-block;
+    margin-right: var(--spacing2);
+}
+.links{
+    display: flex;
+    justify-content: space-between;
 }
 /*Utility Classes*/
 .padding1{
