@@ -3,7 +3,7 @@
     Backend: Javascript e EJS
     Banco de dados: MongoDB 
 ## Login e Registro
-    ![login](public/assets/imgs/login.png)
+    ![login](./public/assets/imgs/login.png)
 ## Criar um registro
     ![form](public/assets/imgs/form.png)
 ## Editar e excluir um registro
