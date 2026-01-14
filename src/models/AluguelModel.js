@@ -84,6 +84,7 @@ class Aluguel {
         if(this.errors.length > 0) return
         this.contato = await AluguelModel.findByIdAndUpdate(id, this.body, { new: true })
     }
+    
     static async buscarComFiltro(filtro, valor){
 
         const query = {}
@@ -91,7 +92,11 @@ class Aluguel {
         if(filtro === "comprador"){
             query[filtro] = {$regex: valor, $options: 'i'} //filtro: valor, case insensitive e aceita pedaços do valor
         } else{
-            query[filtro] = valor; //filtro: valor
+            const dataInicio = new Date(valor)
+            const dataFim = new Date(valor)
+            dataFim.setDate(dataFim.getDate() + 1);
+            query[filtro] = {$gte: dataInicio, $lte: dataFim}; //filtro: valor
+            console.log(query)
         }
         const aluguel = await AluguelModel.find(query).sort({dataAluguel: -1})
         return aluguel
@@ -99,3 +104,4 @@ class Aluguel {
 }
 
 module.exports = Aluguel
+

@@ -17,3 +17,4 @@ form.addEventListener('submit', function(e) {
     this.action = novaAction
     this.submit()
 })
+//aluguel/terminoAluguel/jun%2F20%2F2006
