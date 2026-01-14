@@ -6,10 +6,13 @@
     right: 0;
     width: 100vw;
     padding: var(--spacing3);
+    z-index: 1;
 }
 .header a {
     margin-right: var(--spacing3);
-
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
 }
 body {
     margin-top: var(--spacing6);

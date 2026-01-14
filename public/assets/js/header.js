@@ -10,7 +10,10 @@ class Header extends HTMLElement {
             this.innerHTML = `
             <div class="header">
                 <h2>Rent-Flow</h2>
+                <div>
+                <a href="/">Homepage</a>            
                 <a href="/login/logout">Sair</a>            
+                </div>
             </div>`
         } else {
         this.innerHTML = `

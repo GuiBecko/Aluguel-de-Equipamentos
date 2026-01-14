@@ -1,29 +1,40 @@
+
 .login, .registro {
     width: 40%;
+    height:60vh;
+    background-color: var(--color100);
     gap: var(--spacing3);
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: var(--spacing3);
+    padding: var(--spacing4);
+    border-radius: var(--spacing2);
     margin-top: var(--spacing6);
     margin-right: var(--spacing7);
 }
 .form{
-    width: 80%;
+    width: 100%;
 }
 .form-group{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: start;
-    align-items: center;
-    gap: var(--spacing6);
-
+    margin-left: 10%;
     padding: var(--spacing2);
 }
 .form-group input{
-    width: 70%;
-    height: 25px;
+    width: 90%;
+    height:40px;
     padding: var(--spacing2);
+    border-radius: var(--spacing2);
+    border: 1px solid lightgrey;
+}
+.form-group p{
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 .links{
     display: flex;
@@ -31,10 +42,14 @@
     justify-content: center;
     flex-direction: column;
 }
+.links a{
+    text-decoration: none;
+    color: blue;
+}
 .secao{
     height: 100vh;
     width: 30%;
-    background-color: blue;
+    background: repeating-linear-gradient(45deg, #92c9b1, #92c9b1 20px, #b3e0d2 20px, #b3e0d2 40px);
     right: 0;
     position: fixed;
     top: 0;
@@ -43,4 +58,18 @@
 .form-container{
     padding: var(--spacing3);
     border-radius: var(--spacing2);
+}
+.btn{
+    width: 100%;
+    margin: 20px 0 10px 0;
+    background-color: #151717;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    font-family: sans-serif;
 }
