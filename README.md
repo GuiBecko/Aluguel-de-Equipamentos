@@ -13,4 +13,4 @@
 <img src="https://github.com/GuiBecko/Aluguel-de-Equipamentos/blob/main/public/assets/imgs/alugueis.png"></img>
     
 ## Busca com filtros
-    Implementado um sistema de busca de alugueis a partir do nome do comprador ou data do termino do aluguel
+Implementado um sistema de busca de alugueis a partir do nome do comprador ou data do termino do aluguel
