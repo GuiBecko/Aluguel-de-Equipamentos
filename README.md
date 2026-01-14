@@ -3,10 +3,10 @@
     Backend: Javascript e EJS
     Banco de dados: MongoDB 
 ## Login e Registro
-    ![login](./public/assets/imgs/login.png)
+    ![login](https://github.com/GuiBecko/Aluguel-de-Equipamentos/blob/main/public/assets/imgs/login.png)
 ## Criar um registro
-    ![form](public/assets/imgs/form.png)
+    ![form](https://github.com/GuiBecko/Aluguel-de-Equipamentos/blob/main/public/assets/imgs/form.png)
 ## Editar e excluir um registro
-    ![alugueis](public/assets/imgs/alugueis.png)
+    ![alugueis](https://github.com/GuiBecko/Aluguel-de-Equipamentos/blob/main/public/assets/imgs/alugueis.png)
 ## Busca com filtros
     Implementado um sistema de busca de alugueis a partir do nome do comprador ou data do termino do aluguel
