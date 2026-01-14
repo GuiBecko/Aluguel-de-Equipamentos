@@ -1,11 +1,12 @@
 # Sistema de registro - alugueis de equipamentos
-
+    Frontend: Javascript e CSS
+    Backend: Javascript e EJS
+    Banco de dados: MongoDB 
 ## Login e Registro
-
+    <img src="/assets/imgs/login.png"> </img>
 ## Criar um registro
-
-## Editar um registro
-
-## Excluir um registro
-
-## Buscca com filtros
+    <img src="/assets/imgs/form.png"> </img>
+## Editar e excluir um registro
+    <img src="/assets/imgs/alugueis.png"> </img>
+## Busca com filtros
+    Implementado um sistema de busca de alugueis a partir do nome do comprador ou data do termino do aluguel
