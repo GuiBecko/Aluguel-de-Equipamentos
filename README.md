@@ -3,10 +3,10 @@
     Backend: Javascript e EJS
     Banco de dados: MongoDB 
 ## Login e Registro
-    <img src="/public/assets/imgs/login.png"> </img>
+    ![login](/public/assets/imgs/login.png)
 ## Criar um registro
-    <img src="/public/assets/imgs/form.png"> </img>
+    ![form](/public/assets/imgs/form.png)
 ## Editar e excluir um registro
-    <img src="/public/assets/imgs/alugueis.png"> </img>
+    ![alugueis](/public/assets/imgs/alugueis.png)
 ## Busca com filtros
     Implementado um sistema de busca de alugueis a partir do nome do comprador ou data do termino do aluguel
