@@ -12,7 +12,10 @@ exports.index = async (req, res) => {
 
 exports.register = (req, res) => {
   try{
-    res.render('aluguelForm')
+    const aluguelTemp = req.flash('aluguel')
+    const aluguel = aluguelTemp[0] || {}
+
+    res.render('aluguelForm', {aluguel})
   } catch(e){
     console.log(e)
     res.render('404')
@@ -25,7 +28,9 @@ exports.create = async (req, res) => {
     await aluguel.register()
 
     if(aluguel.errors.length > 0){
+  
       req.flash('errors', aluguel.errors)
+      req.flash('aluguel', req.body)
       req.session.save(function(){
         return res.redirect('/aluguel/register')
       })
@@ -41,6 +46,7 @@ exports.create = async (req, res) => {
     res.render('404')
   }
 }
+
 exports.indexID = async (req, res) => {
   if(!req.params.id) return res.render('404')
     
@@ -50,6 +56,7 @@ exports.indexID = async (req, res) => {
     
   res.render('aluguel', { aluguel })
 }
+
 exports.delete = async (req, res) => {
   if(!req.params.id) res.render('404')
 
@@ -63,6 +70,7 @@ exports.delete = async (req, res) => {
   req.session.save(() => res.redirect('/aluguel/index'))
   return
 }
+
 exports.edit = async (req, res) => {
   if(!req.params.id){
     res.render('404')
@@ -71,6 +79,7 @@ exports.edit = async (req, res) => {
     res.render('aluguelEdit', { aluguel })
   } 
 }
+
 exports.editPost = async(req, res) => {
   if(!req.params.id) res.render('404')
   
@@ -90,6 +99,7 @@ exports.editPost = async(req, res) => {
       res.redirect('/aluguel/index')
   })
 }
+
 exports.find = async (req, res) => {
   try{
 
