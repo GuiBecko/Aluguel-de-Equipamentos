@@ -10,15 +10,37 @@
 <body>
     <c-header logado="<%= user ? 'true' : 'false' %>"></c-header>
 
-    <h1>Pagina do aluguel</h1>
+    
+
     <div class="aluguel-container">
-        <p><%= aluguel.comprador%></p>
-        <p><%= aluguel.valor%></p>
-        <p><%= aluguel.equipamento%></p>
-        <p><%= aluguel.endereco%></p>
-        <p><%= aluguel.dataAluguel%></p>
-        <p><%= aluguel.terminoAluguel%></p>
-        <p><%= aluguel.formaPagamento%></p>
+        <div class="group">
+            <p class="label">Comprador</p>
+            <p><%= aluguel.comprador%></p>
+        </div>
+        <div class="group">
+            <p class="label">Valor</p>
+            <p><%= aluguel.valor%></p>
+        </div>
+        <div class="group">
+            <p class="label">Equipamento</p>
+            <p><%= aluguel.equipamento%></p>
+        </div>
+        <div class="group">
+            <p class="label">Endereço</p>
+            <p><%= aluguel.endereco%></p>
+        </div>
+        <div class="group">
+            <p class="label">Data inicial do aluguel</p>
+            <p><%= aluguel.dataAluguel.getDate()%> /  <%=aluguel.dataAluguel.getMonth() + 1%> / <%=aluguel.dataAluguel.getYear() %></p>
+        </div>
+        <div class="group">
+            <p class="label">Data de termino do aluguel</p>
+            <p><%= aluguel.terminoAluguel.getDate()%> /  <%=aluguel.terminoAluguel.getMonth() + 1%> / <%=aluguel.terminoAluguel.getYear() %></p>
+        </div>
+        <div class="group">
+            <p class="label">Forma de pagamento</p>
+            <p><%= aluguel.formaPagamento%></p>
+        </div>
     </div>
 
     <script src="/assets/js/header.js"></script>

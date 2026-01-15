@@ -44,9 +44,9 @@
             </div>
             <% alugueis.forEach(aluguel => { %>
                 <div class="aluguel">
-                        <div style="font-size: var(--spacing4);"><%= aluguel.comprador %> </div>
-                        <div><%= aluguel.tipoEquipamento %> </div>
-                        <div><%= aluguel.valor %> </div>
+                        <div style="font-size: var(--spacing3); font-family: sans-serif;"><%= aluguel.comprador %> </div>
+                        <div style="font-family: sans-serif;"><%= aluguel.tipoEquipamento %> </div>
+                        <div style="font-family: sans-serif;"><%= aluguel.valor %> </div>
                     
                     <div class="links">
                         <div style="cursor: pointer;" class="more-infos"><a href="/aluguel/index/<%= aluguel._id %>">mais</a></div>
